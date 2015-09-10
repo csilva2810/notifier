@@ -11,27 +11,41 @@ html, body {
   color: #777;
 }
 .container {
+  width: 75%;
   margin: 0 auto;
   padding: 5% 0;
 }
+@media screen and (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
 .page-title {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   font-size: 3em;
   text-align: center;
 }
 .page-description {
-  width: 50%;
+  width: 100%;
   margin: 12px auto;
   font-weight: normal;
   color: #aaa;
   text-align: center;
 }
-.buttons-container {
-  width: 50%;
-  margin: 48px auto;
+pre {
+  margin: 0 auto;
+}
+.code-example {
+  padding: 0 !important;
+  background: #fafafa !important;
+  border: 1px solid #eaeaea !important;
+  border-radius: 4px !important;
+  text-align: left !important;
+  font-size: 14px !important;
 }
 .box {
+  margin: 24px auto;
   padding: 12px;
   background: white;
   border-radius: 3px;
@@ -56,7 +70,7 @@ html, body {
 }
 .btn:hover, .btn:focus {
   background: #eee;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,.3);
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.2);
 }
 .btn:focus {
   outline: 1px dashed #5af;
@@ -89,33 +103,40 @@ html, body {
   border-color: #e6b403;
 }
 .btn.btn-danger {
-  background: #e31b45;
-  border-color: #e31b45;
+  background: #F44336;
+  border-color: #F44336;
   color: white;
 }
 .btn.btn-danger:hover {
-  background: #d30b35;
-  border-color: #d30b35;
+  background: #e43326;
+  border-color: #e43326;
 }
-.table {
-  width: 100%;
-  margin: 0 auto;
+.browser-list {
+  list-style: none;
 }
-.table td {
-  padding: 4px;
+.browser-list-item {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 6px;
+  border-radius: 4px;
+  text-align: center;
+
+  transition: .3s ease;
 }
-.table td.desc {
+.browser-list-item:hover {
   background: #eee;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
 }
 .browser {
-  display: inline-block;
+  display: block;
+  margin-bottom: 6px;
   background-image: url('../img/browser-sprite.png');
   background-repeat: no-repeat;
 }
 .browser.chrome {
   background-position: -3px -4px;
   width: 54px;
-  height: 53px;
+  height: 54px;
 }
 .browser.firefox {
   background-position: -64px -4px;
@@ -125,17 +146,26 @@ html, body {
 .browser.ie {
   background-position: -122px -4px;
   width: 54px;
-  height: 50px;
+  height: 54px;
 }
 .browser.opera {
   background-position: -186px -4px;
   width: 48px;
-  height: 53px;
+  height: 54px;
 }
 .browser.safari {
   background-position: -244px -4px;
   width: 52px;
-  height: 53px;
+  height: 54px;
+}
+hr {
+  display: block;
+  margin: 0;
+  margin-bottom: 24px;
+  width: 25px;
+  height: 5px;
+  background: #ddd;
+  border: none;
 }
 .text-center {
   text-align: center;

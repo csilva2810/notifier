@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Notifier</title>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
   <link rel="stylesheet" href="css/page.css">
   <link rel="stylesheet" href="css/notifier.css">
+
+  <!--highlight js-->
+  <link rel="stylesheet" href="js/highlight/styles/atelier-cave.light.css">
+  <script type="text/javascript" src="js/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 <body>
@@ -17,9 +23,9 @@
     <h1 class="page-title">Notifier</h1>
     <h2 class="page-description">Lindas notificações, com CSS e Javascript puro!</h2>
 
-    <div class="box buttons-container text-center">
+    <div class="box">
 
-      <p>Clique nos botões abaixo para ver as notificações</p>
+      <h2 class="title">Notificações Padrão</h2><hr>
 
       <button type="button" class="btn" id="btn-default">Default</button>
       <button type="button" class="btn btn-info" id="btn-info">Info</button>
@@ -27,24 +33,39 @@
       <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
       <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
 
-      <h2>Browsers Suportados</h2>
+      <h2 class="title">Notificações com Ícones</h2><hr>
 
-      <table class="table">
-        <tr>
-          <td><i class="browser chrome"></i></td>
-          <td><i class="browser firefox"></i></td>
-          <td><i class="browser ie"></i></td>
-          <td><i class="browser opera"></i></td>
-          <td><i class="browser safari"></i></td>
-        </tr>
-        <tr>
-          <td class="desc">Chrome</td>
-          <td class="desc">Firefox</td>
-          <td class="desc">IE 9+</td>
-          <td class="desc">Opera</td>
-          <td class="desc">Safari</td>
-        </tr>
-      </table>
+      <button type="button" class="btn" id="btn-default-i">Default</button>
+      <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
+      <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
+      <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
+      <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
+
+      <h2 class="title">Notificações com Fechamento Automático</h2><hr>
+
+      <button type="button" class="btn"             id="btn-default-temp">Default</button>
+      <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
+      <button type="button" class="btn btn-success" id="btn-success-temp">Success</button>
+      <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
+      <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
+
+      <h2 class="title">Exemplo de Uso</h2><hr>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default', '', '', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Browsers Suportados</h2><hr>
+
+      <ul class="browser-list">
+        <li class="browser-list-item"><i class="browser chrome" ></i><small>Chrome </small></li>
+        <li class="browser-list-item"><i class="browser firefox"></i><small>Firefox</small></li>
+        <li class="browser-list-item"><i class="browser ie"     ></i><small>IE9+   </small></li>
+        <li class="browser-list-item"><i class="browser opera"  ></i><small>Opera  </small></li>
+        <li class="browser-list-item"><i class="browser safari" ></i><small>Safari </small></li>
+      </ul>
 
     </div>
 

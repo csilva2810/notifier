@@ -17,7 +17,7 @@ notifier = (function(w, d) {
 
   show = function(title, msg, type, icon, timeout) {
 
-    timeout = (typeof timeout != 'number') ? 0 : timeout * 1000;
+    if (typeof timeout != 'number') timeout = 0;
 
     var container = d.querySelector('.notifier-container'),
         ntf       = myCreateElement('div', {class: 'notifier ' + type}),
@@ -25,7 +25,7 @@ notifier = (function(w, d) {
         ntfBody   = myCreateElement('div', {class: 'notifier-body'}),
         ntfImg    = myCreateElement('div', {class: 'notifier-img'}),
         img       = myCreateElement('img', {class: 'img', src: icon}),
-        ntfClose  = myCreateElement('a',   {class: 'notifier-close', href: '#'});
+        ntfClose  = myCreateElement('button',{class: 'notifier-close', type: 'button'});
 
     ntfTitle.appendChild(d.createTextNode(title));
     ntfBody.appendChild(d.createTextNode(msg));
