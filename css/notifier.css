@@ -1,0 +1,103 @@
+.notifier-container {
+  z-index: 999;
+  position: fixed;
+  top: 4px;
+  right: 4px;
+  padding: 4px;
+  min-width: 350px;
+  max-width: 350px;
+  font-family: "Segoe UI", "Tahoma", "Calibri", "Verdana", sans-serif;
+  color: #999;
+}
+.notifier {
+  position: relative;
+  width: 100%;
+  min-height: 62px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: white;
+  border-left: 4px solid #ddd;
+  border-radius: 1px;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,.15);
+
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+
+  -webkit-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+                      opacity .6s ease;
+     -moz-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+                      opacity .6s ease;
+      -ms-transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+                      opacity .6s ease;
+          transition: all .6s cubic-bezier(0.5, -0.5, 0.3, 1.4),
+                      opacity .6s ease;
+}
+.notifier.shown {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.notifier.shown:hover {
+  opacity: 1;
+}
+.notifier-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: bold;
+  font-size: .9em;
+  border-radius: 50%;
+  opacity: .5;
+  -webkit-transition: .3s ease;
+     -moz-transition: .3s ease;
+      -ms-transition: .3s ease;
+          transition: .3s ease;
+}
+.notifier-close:hover {
+  opacity: 1;
+  color: #999;
+  background: #eee;
+}
+.notifier-img {
+  float: left;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.img {
+  width: 48px;
+  height: 48px;
+}
+.notifier-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.notifier-body {
+  font-size: 14px;
+}
+.notifier.info {
+  border-left-color: #34c6e8;
+}
+.notifier.success {
+  border-left-color: #41d29a;
+}
+.notifier.warning {
+  border-left-color: #ffcb04;
+}
+.notifier.danger {
+  border-left-color: #e31b45;
+}
