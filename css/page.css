@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 html, body {
-  background: #fafafa;
+  background: #ecf0f1;
   font-family: "Raleway", "Segoe UI", "Calibri", sans-serif;
   font-size: 16px;
   color: #777;
@@ -76,40 +76,40 @@ pre {
   outline: 1px dashed #5af;
 }
 .btn.btn-info {
-  background: #34c6e8;
-  border-color: #34c6e8;
+  background: #3498db;
+  border-color: #3498db;
   color: white;
 }
 .btn.btn-info:hover {
-  background: #24b6d8;
-  border-color: #24b6d8;
+  background: #44a8eb;
+  border-color: #44a8eb;
 }
 .btn.btn-success {
-  background: #41d29a;
-  border-color: #41d29a;
+  background: #1abc9c;
+  border-color: #1abc9c;
   color: white;
 }
 .btn.btn-success:hover {
-  background: #31c29a;
-  border-color: #31c29a;
+  background: #2accac;
+  border-color: #2accac;
 }
 .btn.btn-warning {
-  background: #ffcb04;
-  border-color: #ffcb04;
+  background: #f1c40f;
+  border-color: #f1c40f;
   color: white;
 }
 .btn.btn-warning:hover {
-  background: #e6b403;
-  border-color: #e6b403;
+  background: #f2ca2a;
+  border-color: #f2ca2a;
 }
 .btn.btn-danger {
-  background: #F44336;
-  border-color: #F44336;
+  background: #e74c3c;
+  border-color: #e74c3c;
   color: white;
 }
 .btn.btn-danger:hover {
-  background: #e43326;
-  border-color: #e43326;
+  background: #f75c4c;
+  border-color: #f75c4c;
 }
 .browser-list {
   list-style: none;

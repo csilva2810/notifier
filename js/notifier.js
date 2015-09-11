@@ -27,9 +27,9 @@ notifier = (function(w, d) {
         img       = myCreateElement('img', {class: 'img', src: icon}),
         ntfClose  = myCreateElement('button',{class: 'notifier-close', type: 'button'});
 
-    ntfTitle.appendChild(d.createTextNode(title));
-    ntfBody.appendChild(d.createTextNode(msg));
-    ntfClose.appendChild(d.createTextNode('x'));
+    ntfTitle.innerHTML = title;
+    ntfBody.innerHTML  = msg;
+    ntfClose.innerHTML = '&times;';
 
     if (icon.length > 0) {
       ntfImg.appendChild(img);
