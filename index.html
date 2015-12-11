@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
   <link rel="stylesheet" href="css/page.css">
   <link rel="stylesheet" href="css/notifier.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <!--highlight js-->
   <link rel="stylesheet" href="js/highlight/styles/atelier-cave.light.css">
@@ -18,14 +19,23 @@
 </head>
 <body>
 
-  <div class="container">
+  <header class="header">
 
     <h1 class="page-title">Notifier</h1>
     <h2 class="page-description">Lindas notificações, com CSS e Javascript puro!</h2>
 
-    <div class="box">
+    <p class="page-description-text">
+      Trabalhando em um projeto e precisando de uma solução para notificações? <strong title="Pulando de Alegria!">Boa notícia \o/</strong> <br>
+      O notifier pode te ajudar com essa tarefa, basta importar para o seu projeto e começar a usar!
+    </p>
 
-      <h2 class="title">Notificações Padrão</h2><hr>
+  </header>
+
+  <div class="container">
+
+    <main class="box">
+
+      <h2 class="title">Notificações Padrão</h2>
 
       <button type="button" class="btn" id="btn-default">Default</button>
       <button type="button" class="btn btn-info" id="btn-info">Info</button>
@@ -33,7 +43,17 @@
       <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
       <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
 
-      <h2 class="title">Notificações com Ícones</h2><hr>
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default.', '', '', 0);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', '', 0);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', '', 0);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', '', 0);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', '', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Notificações com Ícones</h2>
 
       <button type="button" class="btn" id="btn-default-i">Default</button>
       <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
@@ -41,7 +61,17 @@
       <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
       <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
 
-      <h2 class="title">Notificações com Fechamento Automático</h2><hr>
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 0);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 0);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 0);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 0);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Notificações com Fechamento Automático</h2>
 
       <button type="button" class="btn"             id="btn-default-temp">Default</button>
       <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
@@ -49,27 +79,62 @@
       <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
       <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
 
-      <h2 class="title">Exemplo de Uso</h2><hr>
-
       <pre>
         <code class="javascript code-example">
-          notifier.show('Default!', 'Sou uma notificação Default', '', '', 0);
+          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 4000);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 4000);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 4000);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
         </code>
       </pre>
 
-      <h2 class="title">Browsers Suportados</h2><hr>
+      <h2 class="title">Browsers Suportados</h2>
 
       <ul class="browser-list">
-        <li class="browser-list-item"><i class="browser chrome" ></i><small>Chrome </small></li>
-        <li class="browser-list-item"><i class="browser firefox"></i><small>Firefox</small></li>
-        <li class="browser-list-item"><i class="browser ie"     ></i><small>IE9+   </small></li>
-        <li class="browser-list-item"><i class="browser opera"  ></i><small>Opera  </small></li>
-        <li class="browser-list-item"><i class="browser safari" ></i><small>Safari </small></li>
+        <li class="browser-list-item">
+          <i class="browser chrome"></i>
+          <small><a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank">Chrome</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser firefox"></i>
+          <small><a href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank">Firefox</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser ie"></i>
+          <small><a href="http://windows.microsoft.com/pt-br/internet-explorer/download-ie" target="_blank">IE9+</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser opera"></i>
+          <small><a href="http://www.opera.com/" target="_blank">Opera</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser safari"></i>
+          <small><a href="www.apple.com/br/safari/" target="_blank">Safari</a></small>
+        </li>
       </ul>
 
-    </div>
+    </main><!-- .box -->
 
-  </div>
+  </div><!-- .container -->
+
+  <footer class="footer text-center">
+    <p>Criado por <a href="mailto:csilva2810@gmail.com" target="_blank">Carlos Silva</a></p>
+    <div class="social">
+      <a class="social-item" href="https://github.com/csilva2810" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="social-item" href="https://plus.google.com/u/0/+CarlosAlbertoSilvaJunior" target="_blank">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a class="social-item" href="https://instagram.com/csilva_2810/" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="social-item" href="mailto:csilva2810@gmail.com" target="_blank">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="js/notifier.js"></script>
   <script type="text/javascript" src="js/page.js"></script>

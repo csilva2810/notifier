@@ -5,15 +5,40 @@
           box-sizing: border-box;
 }
 html, body {
-  background: #ecf0f1;
+  margin: 0;
+  padding: 0;
   font-family: "Raleway", "Segoe UI", "Calibri", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #777;
+  background-color: #fff;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #1abc9c;
+}
+a:hover {
+  font-weight: bold;
+}
+.header,
+.footer {
+  padding: 25px 20%;
+  background-color: #5af;
+  color: white;
+  text-align: center;
+}
+.footer {
+  background-color: #48C;
+}
+.footer a,
+.footer a:visited {
+  color: white;
+  text-decoration: underline;
 }
 .container {
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
-  padding: 5% 0;
+  padding: 2% 0;
 }
 @media screen and (max-width: 992px) {
   .container {
@@ -30,8 +55,13 @@ html, body {
   width: 100%;
   margin: 12px auto;
   font-weight: normal;
-  color: #aaa;
+  color: #fff;
   text-align: center;
+}
+.page-description-text {
+  padding: 10px 4px;
+  border-radius: 2px;
+  background: rgba(0,0,0,.15);
 }
 pre {
   margin: 0 auto;
@@ -45,11 +75,8 @@ pre {
   font-size: 14px !important;
 }
 .box {
-  margin: 24px auto;
+  margin: 0 auto;
   padding: 12px;
-  background: white;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.15);
 }
 .btn {
   display: inline-block;
@@ -113,6 +140,7 @@ pre {
 }
 .browser-list {
   list-style: none;
+  padding: 0;
 }
 .browser-list-item {
   display: inline-block;
@@ -158,6 +186,23 @@ pre {
   width: 52px;
   height: 54px;
 }
+.social {
+  text-align: center;
+}
+.social-item {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: .3s;
+}
+.social-item:hover {
+  background-color: rgba(255,255,255,0.2);
+}
 hr {
   display: block;
   margin: 0;
@@ -170,3 +215,20 @@ hr {
 .text-center {
   text-align: center;
 }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+
+::-webkit-scrollbar:hover { width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #ddd;
+}
+
+::-webkit-scrollbar-thumb:hover { background: #ccc; }
+
+::-webkit-scrollbar-thumb:active { background: #bbb; }
