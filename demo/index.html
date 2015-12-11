@@ -26,8 +26,17 @@
 
     <p class="page-description-text">
       Trabalhando em um projeto e precisando de uma solução para notificações? <strong title="Pulando de Alegria!">Boa notícia \o/</strong> <br>
-      O notifier pode te ajudar com essa tarefa, basta importar para o seu projeto e começar a usar!
+      O notifier pode te ajudar com essa tarefa! Basta importar para o seu projeto e começar a usar!
     </p>
+
+    <div class="text-center">
+      <a href="https://github.com/csilva2810/notifier/archive/master.zip" class="btn btn-outline btn-large" target="_blank">
+        Download ZIP <i class="fa fa-download"></i>
+      </a>
+      <a href="https://github.com/csilva2810/notifier" class="btn btn-outline btn-large" target="_blank">
+        Projeto GitHub <i class="fa fa-github"></i>
+      </a>
+    </div>
 
   </header>
 
@@ -35,57 +44,74 @@
 
     <main class="box">
 
+      <h2 class="title">Como Usar?</h2>
+      <p>Muito Simples!</p>
+      <ol>
+        <li>Baixe o projeto.</li>
+        <li>Exporte os arquivos.</li>
+        <li>Copie os arquivos "css/notifier.css" e "js/notifier.css" para dentro do seu projeto.</li>
+        <li>Importe o CSS no <code class="code">&lt;header&gt;</code></li>
+        <li>Importe o JS antes do fechamento do <code class="code">&lt;body&gt;</code></li>
+        <li>Agora é só ser feliz! ;)</li>
+      </ol>
+
       <h2 class="title">Notificações Padrão</h2>
 
-      <button type="button" class="btn" id="btn-default">Default</button>
-      <button type="button" class="btn btn-info" id="btn-info">Info</button>
-      <button type="button" class="btn btn-success" id="btn-success">Success</button>
-      <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
-      <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
+      <div class="btn-group">
+        <button type="button" class="btn" id="btn-default">Default</button>
+        <button type="button" class="btn btn-info" id="btn-info">Info</button>
+        <button type="button" class="btn btn-success" id="btn-success">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
+      </div>
 
       <pre>
         <code class="javascript code-example">
-          notifier.show('Default!', 'Sou uma notificação Default.', '', '', 0);
-          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', '', 0);
-          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', '', 0);
-          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', '', 0);
-          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', '', 0);
+          notifier.show('Default!' , 'Sou uma notificação Default.', '', '', 0);
+          notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', '', 0);
+          notifier.show('Parabéns!', 'Você acabou de cadastrar seu currículo com sucesso.', '', '', 0);
+          notifier.show('Atenção!' , 'Os dados apresentados nessa tela podem sofrer alterações.', '', '', 0);
+          notifier.show('Desculpe!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', '', 0);
         </code>
       </pre>
 
       <h2 class="title">Notificações com Ícones</h2>
 
-      <button type="button" class="btn" id="btn-default-i">Default</button>
-      <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
-      <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
-      <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
-      <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
+      <div class="btn-group">
+        <button type="button" class="btn" id="btn-default-i">Default</button>
+        <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
+        <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
+        <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
+      </div>
 
       <pre>
         <code class="javascript code-example">
-          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 0);
-          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 0);
-          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 0);
-          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 0);
-          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 0);
+          notifier.show('Default!' , 'Sou uma notificação Default.', '', 'img/clock-48.png', 0);
+          notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 0);
+          notifier.show('Parabéns!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 0);
+          notifier.show('Atenção!' , 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 0);
+          notifier.show('Desculpe!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 0);
         </code>
       </pre>
 
       <h2 class="title">Notificações com Fechamento Automático</h2>
 
-      <button type="button" class="btn"             id="btn-default-temp">Default</button>
-      <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
-      <button type="button" class="btn btn-success" id="btn-success-temp">Success</button>
-      <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
-      <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
+      <div class="btn-group">
+        <button type="button" class="btn"             id="btn-default-temp">Default</button>
+        <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
+        <button type="button" class="btn btn-success" id="btn-success-temp">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
+        <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
+      </div>
 
       <pre>
         <code class="javascript code-example">
-          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 4000);
-          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
-          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 4000);
-          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 4000);
-          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
+          notifier.show('Default!' , 'Sou uma notificação Default.', '', 'img/clock-48.png', 4000);
+          notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+          notifier.show('Parabéns!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 4000);
+          notifier.show('Atenção!' , 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 4000);
+          notifier.show('Desculpe!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
         </code>
       </pre>
 
@@ -93,24 +119,29 @@
 
       <ul class="browser-list">
         <li class="browser-list-item">
-          <i class="browser chrome"></i>
-          <small><a href="https://www.google.com.br/chrome/browser/desktop/">Chrome</a></small>
+          <a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank">
+            <i class="browser chrome"></i><small>Chrome</small>
+          </a>
         </li>
         <li class="browser-list-item">
-          <i class="browser firefox"></i>
-          <small><a href="https://www.mozilla.org/pt-BR/firefox/new/">Firefox</a></small>
+          <a href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank">
+            <i class="browser firefox"></i><small>Firefox</small>
+          </a>
         </li>
         <li class="browser-list-item">
-          <i class="browser ie"></i>
-          <small><a href="http://windows.microsoft.com/pt-br/internet-explorer/download-ie">IE9+</a></small>
+          <a href="http://windows.microsoft.com/pt-br/internet-explorer/download-ie" target="_blank">
+            <i class="browser ie"></i><small>IE9+</small>
+          </a>
         </li>
         <li class="browser-list-item">
-          <i class="browser opera"></i>
-          <small><a href="http://www.opera.com/">Opera</a></small>
+          <a href="http://www.opera.com/" target="_blank">
+            <i class="browser opera"></i><small>Opera</small>
+          </a>
         </li>
         <li class="browser-list-item">
-          <i class="browser safari"></i>
-          <small><a href="www.apple.com/br/safari/">Safari</a></small>
+          <a href="www.apple.com/br/safari/" target="_blank">
+            <i class="browser safari"></i><small>Safari</small>
+          </a>
         </li>
       </ul>
 
@@ -130,7 +161,7 @@
       <a class="social-item" href="https://instagram.com/csilva_2810/" target="_blank">
         <i class="fa fa-instagram"></i>
       </a>
-      <a class="social-item" href="mailto:csilva2810@gmail.com" target="_blank">
+      <a class="social-item" href="mailto:csilva2810@gmail.com">
         <i class="fa fa-envelope"></i>
       </a>
     </div>

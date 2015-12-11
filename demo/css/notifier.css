@@ -4,8 +4,8 @@
   top: 4px;
   right: 4px;
   padding: 4px;
-  min-width: 350px;
-  max-width: 350px;
+  width: 350px;
+  max-width: 98%;
   font-family: "Segoe UI", "Tahoma", "Calibri", "Verdana", sans-serif;
   color: #999;
 
@@ -96,7 +96,7 @@
   font-weight: normal;
 }
 .notifier-body {
-  font-size: 12px;
+  font-size: 13px;
 }
 .notifier.info {
   border-left-color: #3498db;
