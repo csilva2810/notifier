@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifier</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/notifier.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <!--highlight js-->
+  <link rel="stylesheet" href="js/highlight/styles/atelier-cave.light.css">
+  <script type="text/javascript" src="js/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <header class="header">
+
+    <h1 class="page-title">Notifier</h1>
+    <h2 class="page-description">Lindas notificações, com CSS e Javascript puro!</h2>
+
+    <p class="page-description-text">
+      Trabalhando em um projeto e precisando de uma solução para notificações? <strong title="Pulando de Alegria!">Boa notícia \o/</strong> <br>
+      O notifier pode te ajudar com essa tarefa, basta importar para o seu projeto e começar a usar!
+    </p>
+
+  </header>
+
+  <div class="container">
+
+    <main class="box">
+
+      <h2 class="title">Notificações Padrão</h2>
+
+      <button type="button" class="btn" id="btn-default">Default</button>
+      <button type="button" class="btn btn-info" id="btn-info">Info</button>
+      <button type="button" class="btn btn-success" id="btn-success">Success</button>
+      <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default.', '', '', 0);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', '', 0);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', '', 0);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', '', 0);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', '', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Notificações com Ícones</h2>
+
+      <button type="button" class="btn" id="btn-default-i">Default</button>
+      <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
+      <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
+      <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
+      <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 0);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 0);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 0);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 0);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Notificações com Fechamento Automático</h2>
+
+      <button type="button" class="btn"             id="btn-default-temp">Default</button>
+      <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
+      <button type="button" class="btn btn-success" id="btn-success-temp">Success</button>
+      <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
+      <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!', 'Sou uma notificação Default.', '', 'img/clock-48.png', 4000);
+          notifier.show('Default!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+          notifier.show('Default!', 'Você acabou de cadastrar seu currículo com sucesso.', '', 'img/ok-48.png', 4000);
+          notifier.show('Default!', 'Os dados apresentados nessa tela podem sofrer alterações.', '', 'img/medium_priority-48.png', 4000);
+          notifier.show('Default!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
+        </code>
+      </pre>
+
+      <h2 class="title">Browsers Suportados</h2>
+
+      <ul class="browser-list">
+        <li class="browser-list-item">
+          <i class="browser chrome"></i>
+          <small><a href="https://www.google.com.br/chrome/browser/desktop/">Chrome</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser firefox"></i>
+          <small><a href="https://www.mozilla.org/pt-BR/firefox/new/">Firefox</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser ie"></i>
+          <small><a href="http://windows.microsoft.com/pt-br/internet-explorer/download-ie">IE9+</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser opera"></i>
+          <small><a href="http://www.opera.com/">Opera</a></small>
+        </li>
+        <li class="browser-list-item">
+          <i class="browser safari"></i>
+          <small><a href="www.apple.com/br/safari/">Safari</a></small>
+        </li>
+      </ul>
+
+    </main><!-- .box -->
+
+  </div><!-- .container -->
+
+  <footer class="footer text-center">
+    <p>Criado por <a href="mailto:csilva2810@gmail.com" target="_blank">Carlos Silva</a></p>
+    <div class="social">
+      <a class="social-item" href="https://github.com/csilva2810" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="social-item" href="https://plus.google.com/u/0/+CarlosAlbertoSilvaJunior" target="_blank">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a class="social-item" href="https://instagram.com/csilva_2810/" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="social-item" href="mailto:csilva2810@gmail.com" target="_blank">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/notifier.js"></script>
+  <script type="text/javascript" src="js/page.js"></script>
+
+</body>
+</html>
