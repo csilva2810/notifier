@@ -68,7 +68,7 @@
       <ol>
         <li>Baixe o projeto.</li>
         <li>Exporte os arquivos.</li>
-        <li>Copie os arquivos "css/notifier.css" e "js/notifier.css" para dentro do seu projeto.</li>
+        <li>Copie os arquivos "css/notifier.min.css" e "js/notifier.min.css" para dentro do seu projeto.</li>
         <li>Importe o CSS no <code class="code">&lt;header&gt;</code></li>
         <li>Importe o JS antes do fechamento do <code class="code">&lt;body&gt;</code></li>
         <li>Agora é só ser feliz! ;)</li>
@@ -133,6 +133,87 @@
           notifier.show('Desculpe!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
         </code>
       </pre>
+
+      <h2 class="title">Parâmetros</h2>
+
+      <table class="table">
+
+        <thead>
+          <tr><th colspan="4" class="text-left">notifier.show()</th></tr>
+        </thead>
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th class="nowrap">Tipo</th>
+            <th>Descrição</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Título</td>
+            <td class="nowrap">String</td>
+            <td>Título da notifiação.</td>
+            <td class="text-center">''</td>
+          </tr>
+          <tr>
+            <td>Mensagem</td>
+            <td class="nowrap">String</td>
+            <td>Mensagem da notificação.</td>
+            <td class="text-center">''</td>
+          </tr>
+          <tr>
+            <td>Tipo</td>
+            <td class="nowrap">String</td>
+            <td>
+              Cor da notifiação. <br>
+              <b>Valores aceitos: </b> '', info, success, warning, danger
+            </td>
+            <td class="text-center">''</td>
+          </tr>
+          <tr>
+            <td>Ícone</td>
+            <td class="nowrap">String</td>
+            <td>
+              Caminho para uma imagem que será exibida dentro da notificação. <br>
+              <b>Por Exemplo:</b> 'img/icon.png'
+            </td>
+            <td class="text-center">''</td>
+          </tr>
+          <tr>
+            <td>Tempo de Exibição</td>
+            <td class="nowrap">Int (ms)</td>
+            <td>
+              Define o tempo em que a notificação ficará em exibição na tela. Após esse tempo, a notificação será fechada
+              automaticamente. <b>Só funciona se o valor passado for maior do que zero</b> <br>
+            </td>
+            <td class="text-center">0</td>
+          </tr>
+        </tbody>
+
+        <thead>
+          <tr><th colspan="4" class="text-left">notifier.hide()</th></tr>
+        </thead>
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th class="nowrap">Tipo</th>
+            <th>Descrição</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Notificação</td>
+            <td>HTML Element</td>
+            <td>Elemento retornado do método show()</td>
+            <td>Obrigatório</td>
+          </tr>
+        </tbody>
+
+      </table>
 
       <h2 class="title">Browsers Suportados</h2>
 

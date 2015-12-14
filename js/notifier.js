@@ -63,6 +63,8 @@ notifier = (function(w, d) {
       hide(ntf);
     });
 
+    return ntf;
+
   }
 
   hide = function(elem) {
@@ -78,7 +80,8 @@ notifier = (function(w, d) {
   createContainer();
 
   return {
-    show: show
+    show: show,
+    hide: hide
   }
 
 })(window, document);
