@@ -134,6 +134,36 @@
         </code>
       </pre>
 
+      <h2 class="title">Usando o método hide()</h2>
+
+      <p>
+        O método notification.show(); sempre retorna o ID da notificação que foi aberta. Nós podemos armazenar esse ID em uma variável
+        para chamar o método notification.hide() passando esse ID para fecharmos a notificação de qualquer lugar que desejarmos. <br>
+        <b>Veja o exemplo: </b>
+      </p>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info" id="btn-nt-show">Mostrar Notificação</button>
+        <button type="button" class="btn btn-danger" id="btn-nt-hide">Esconder Notificação</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          var notificationId;
+
+          var showNotification = function () {
+            notificationId = notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+          };
+
+          var hideNotification = function () {
+            notifier.hide(notificationId);
+          };
+
+          document.querySelector('#btn-nt-show').addEventListener('click', showNotification);
+          document.querySelector('#btn-nt-hide').addEventListener('click', hideNotification);
+        </code>
+      </pre>
+
       <h2 class="title">Métodos</h2>
 
       <h3 class="method">notifier.show(title, msg, type, icon, timeout);</h3>
@@ -142,80 +172,74 @@
         <thead>
           <tr>
             <th>Parâmetro</th>
-            <th class="nowrap">Tipo</th>
             <th>Descrição</th>
-            <th>Default</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
             <td>title</td>
-            <td class="nowrap">String</td>
             <td>Título da notifiação.</td>
-            <td class="text-center">''</td>
           </tr>
           <tr>
             <td>msg</td>
-            <td class="nowrap">String</td>
             <td>Mensagem da notificação.</td>
-            <td class="text-center">''</td>
           </tr>
           <tr>
             <td>type</td>
-            <td class="nowrap">String</td>
             <td>
               Cor da notifiação. <br>
               <b>Valores aceitos: </b> '', info, success, warning, danger
             </td>
-            <td class="text-center">''</td>
           </tr>
           <tr>
             <td>icon</td>
-            <td class="nowrap">String</td>
             <td>
               Caminho para uma imagem que será exibida dentro da notificação. <br>
               <b>Por Exemplo:</b> 'img/icon.png'
             </td>
-            <td class="text-center">''</td>
           </tr>
           <tr>
             <td>timeout</td>
-            <td class="nowrap">Int (ms)</td>
             <td>
-              Define o tempo em que a notificação ficará em exibição na tela. Após esse tempo, a notificação será fechada
-              automaticamente. <b>Só funciona se o valor passado for maior do que zero</b> <br>
+              Tempo em milisegundos para o fechamento automático da notificação. <br>
+              <b>Só funciona se o valor passado for maior do que zero</b>
             </td>
-            <td class="text-center">0</td>
           </tr>
           <tr>
-            <td>Retorno: </td>
-            <td colspan="3">Id da notificação.</td>
+            <td class="bold">Retorno: </td>
+            <td>Id da notificação.</td>
           </tr>
         </tbody>
 
       </table>
 
-      <h3 class="return"></h3>
-
-      <h3 class="method">notifier.hide(notification);</h3>
+      <h3 class="method">
+        notifier.hide(notificationId); <br>
+        <small>Você pode usar esse método para fechar a notificação via Javascript</small>
+      </h3>
 
       <table class="table">
         <thead>
           <tr>
             <th>Parâmetro</th>
-            <th class="nowrap">Tipo</th>
             <th>Descrição</th>
-            <th>Default</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td>Notificação</td>
-            <td>HTML Element</td>
-            <td>Elemento da notificação</td>
-            <td></td>
+            <td>notificationId</td>
+            <td>Id da notificação</td>
+          </tr>
+          <tr>
+            <td class="bold">Retorno: </td>
+            <td>
+              <ul>
+                <li>true - Se a notificação foi fechada</li>
+                <li>false - Se a notificação não foi fechada</li>
+              </ul>
+            </td>
           </tr>
         </tbody>
       </table>

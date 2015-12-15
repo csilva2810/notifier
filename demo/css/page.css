@@ -301,6 +301,9 @@ hr {
 .text-left {
   text-align: left;
 }
+.bold {
+  font-weight: bold;
+}
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar:hover { width: 8px; }
 ::-webkit-scrollbar-track {

@@ -76,3 +76,14 @@ document.querySelector('#btn-danger-temp').addEventListener('click', function(){
   text = 'Ocorreu um erro! Não foi possível salvar o registro.';
   notifier.show('Desculpe!', text, 'danger', 'img/high_priority-48.png', 4000);
 }, false);
+
+//abrir e fechar
+var notificationId;
+var showNotification = function () {
+  notificationId = notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+};
+var hideNotification = function () {
+  notifier.hide(notificationId);
+};
+document.querySelector('#btn-nt-show').addEventListener('click', showNotification);
+document.querySelector('#btn-nt-hide').addEventListener('click', hideNotification);

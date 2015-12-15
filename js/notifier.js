@@ -19,6 +19,8 @@ notifier = (function(w, d) {
 
     if (typeof timeout != 'number') timeout = 0;
 
+    var ntfId = 'notifier-' + count;
+
     var container = d.querySelector('.notifier-container'),
         ntf       = myCreateElement('div', {class: 'notifier ' + type}),
         ntfTitle  = myCreateElement('h2',  {class: 'notifier-title'}),
@@ -44,8 +46,6 @@ notifier = (function(w, d) {
 
     ntfImg.style.height = ntfImg.parentNode.offsetHeight + 'px' || null;
 
-    var ntfId = 'notifier-' + count;
-
     setTimeout(function() {
       ntf.className += ' shown';
       ntf.setAttribute('id', ntfId);
@@ -63,8 +63,6 @@ notifier = (function(w, d) {
       hide(ntfId);
     });
 
-    console.log(ntfId);
-
     count += 1;
 
     return ntfId;
@@ -72,8 +70,6 @@ notifier = (function(w, d) {
   }
 
   hide = function(notificationId) {
-
-    console.log(notificationId);
 
     var notification = document.getElementById(notificationId);
 
@@ -88,9 +84,7 @@ notifier = (function(w, d) {
       return true;
 
     } else {
-
       return false;
-
     }
   }
 
