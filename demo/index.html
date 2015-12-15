@@ -134,13 +134,11 @@
         </code>
       </pre>
 
-      <h2 class="title">Parâmetros</h2>
+      <h2 class="title">Métodos</h2>
 
+      <h3 class="method">notifier.show(title, msg, type, icon, timeout);</h3>
       <table class="table">
 
-        <thead>
-          <tr><th colspan="4" class="text-left">notifier.show()</th></tr>
-        </thead>
         <thead>
           <tr>
             <th>Parâmetro</th>
@@ -152,19 +150,19 @@
 
         <tbody>
           <tr>
-            <td>Título</td>
+            <td>title</td>
             <td class="nowrap">String</td>
             <td>Título da notifiação.</td>
             <td class="text-center">''</td>
           </tr>
           <tr>
-            <td>Mensagem</td>
+            <td>msg</td>
             <td class="nowrap">String</td>
             <td>Mensagem da notificação.</td>
             <td class="text-center">''</td>
           </tr>
           <tr>
-            <td>Tipo</td>
+            <td>type</td>
             <td class="nowrap">String</td>
             <td>
               Cor da notifiação. <br>
@@ -173,7 +171,7 @@
             <td class="text-center">''</td>
           </tr>
           <tr>
-            <td>Ícone</td>
+            <td>icon</td>
             <td class="nowrap">String</td>
             <td>
               Caminho para uma imagem que será exibida dentro da notificação. <br>
@@ -182,7 +180,7 @@
             <td class="text-center">''</td>
           </tr>
           <tr>
-            <td>Tempo de Exibição</td>
+            <td>timeout</td>
             <td class="nowrap">Int (ms)</td>
             <td>
               Define o tempo em que a notificação ficará em exibição na tela. Após esse tempo, a notificação será fechada
@@ -190,11 +188,19 @@
             </td>
             <td class="text-center">0</td>
           </tr>
+          <tr>
+            <td>Retorno: </td>
+            <td colspan="3">Id da notificação.</td>
+          </tr>
         </tbody>
 
-        <thead>
-          <tr><th colspan="4" class="text-left">notifier.hide()</th></tr>
-        </thead>
+      </table>
+
+      <h3 class="return"></h3>
+
+      <h3 class="method">notifier.hide(notification);</h3>
+
+      <table class="table">
         <thead>
           <tr>
             <th>Parâmetro</th>
@@ -208,11 +214,10 @@
           <tr>
             <td>Notificação</td>
             <td>HTML Element</td>
-            <td>Elemento retornado do método show()</td>
-            <td>Obrigatório</td>
+            <td>Elemento da notificação</td>
+            <td></td>
           </tr>
         </tbody>
-
       </table>
 
       <h2 class="title">Browsers Suportados</h2>

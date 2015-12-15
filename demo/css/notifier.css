@@ -21,6 +21,7 @@
   margin-bottom: 12px;
   padding: 8px;
   background: white;
+  cursor: default;
   border-left: 4px solid #95a5a6;
   border-radius: 1px;
   box-shadow: 0 1px 10px 0 rgba(0,0,0,.1), 0 2px 15px 0 rgba(0,0,0,.05);

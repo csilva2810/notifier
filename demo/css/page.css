@@ -57,6 +57,15 @@ a:visited {
     text-align: center;
   }
 }
+.method {
+  display: block;
+  width: 100%;
+  padding: 8px 4px;
+  border-radius: 2px;
+  font-weight: normal;
+  background-color: #5af;
+  color: white;
+}
 .page-title {
   width: 100%;
   margin: 0 auto;
