@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Notifier</title>
 
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
   <link rel="stylesheet" href="css/page.css">
   <link rel="stylesheet" href="css/notifier.css">
@@ -49,7 +68,7 @@
       <ol>
         <li>Baixe o projeto.</li>
         <li>Exporte os arquivos.</li>
-        <li>Copie os arquivos "css/notifier.css" e "js/notifier.css" para dentro do seu projeto.</li>
+        <li>Copie os arquivos "css/notifier.min.css" e "js/notifier.min.css" para dentro do seu projeto.</li>
         <li>Importe o CSS no <code class="code">&lt;header&gt;</code></li>
         <li>Importe o JS antes do fechamento do <code class="code">&lt;body&gt;</code></li>
         <li>Agora é só ser feliz! ;)</li>
@@ -114,6 +133,116 @@
           notifier.show('Desculpe!', 'Ocorreu um erro! Não foi possível salvar o registro.', '', 'img/high_priority-48.png', 4000);
         </code>
       </pre>
+
+      <h2 class="title">Usando o método hide()</h2>
+
+      <p>
+        O método notification.show(); sempre retorna o ID da notificação que foi aberta. Nós podemos armazenar esse ID em uma variável
+        para chamar o método notification.hide() passando esse ID para fecharmos a notificação de qualquer lugar que desejarmos. <br>
+        <b>Veja o exemplo: </b>
+      </p>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info" id="btn-nt-show">Mostrar Notificação</button>
+        <button type="button" class="btn btn-danger" id="btn-nt-hide">Esconder Notificação</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          var notificationId;
+
+          var showNotification = function () {
+            notificationId = notifier.show('Lembrete!', 'Você tem uma reunião agendada às 10:30h.', '', 'img/survey-48.png', 4000);
+          };
+
+          var hideNotification = function () {
+            notifier.hide(notificationId);
+          };
+
+          document.querySelector('#btn-nt-show').addEventListener('click', showNotification);
+          document.querySelector('#btn-nt-hide').addEventListener('click', hideNotification);
+        </code>
+      </pre>
+
+      <h2 class="title">Métodos</h2>
+
+      <h3 class="method">notifier.show(title, msg, type, icon, timeout);</h3>
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>title</td>
+            <td>Título da notifiação.</td>
+          </tr>
+          <tr>
+            <td>msg</td>
+            <td>Mensagem da notificação.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>
+              Cor da notifiação. <br>
+              <b>Valores aceitos: </b> '', info, success, warning, danger
+            </td>
+          </tr>
+          <tr>
+            <td>icon</td>
+            <td>
+              Caminho para uma imagem que será exibida dentro da notificação. <br>
+              <b>Por Exemplo:</b> 'img/icon.png'
+            </td>
+          </tr>
+          <tr>
+            <td>timeout</td>
+            <td>
+              Tempo em milisegundos para o fechamento automático da notificação. <br>
+              <b>Só funciona se o valor passado for maior do que zero</b>
+            </td>
+          </tr>
+          <tr>
+            <td class="bold">Retorno: </td>
+            <td>Id da notificação.</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <h3 class="method">
+        notifier.hide(notificationId); <br>
+        <small>Você pode usar esse método para fechar a notificação via Javascript</small>
+      </h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>notificationId</td>
+            <td>Id da notificação</td>
+          </tr>
+          <tr>
+            <td class="bold">Retorno: </td>
+            <td>
+              <ul>
+                <li>true - Se a notificação foi fechada</li>
+                <li>false - Se a notificação não foi fechada</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2 class="title">Browsers Suportados</h2>
 

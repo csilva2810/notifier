@@ -19,6 +19,8 @@ notifier = (function(w, d) {
 
     if (typeof timeout != 'number') timeout = 0;
 
+    var ntfId = 'notifier-' + count;
+
     var container = d.querySelector('.notifier-container'),
         ntf       = myCreateElement('div', {class: 'notifier ' + type}),
         ntfTitle  = myCreateElement('h2',  {class: 'notifier-title'}),
@@ -44,41 +46,53 @@ notifier = (function(w, d) {
 
     ntfImg.style.height = ntfImg.parentNode.offsetHeight + 'px' || null;
 
-    count += 1;
-
     setTimeout(function() {
       ntf.className += ' shown';
-      ntf.setAttribute('id', 'notifier-' + count);
+      ntf.setAttribute('id', ntfId);
     }, 100);
 
     if (timeout != 0) {
 
       setTimeout(function() {
-        hide(ntf)
+        hide(ntfId);
       }, timeout);
 
     }
 
     ntfClose.addEventListener('click', function() {
-      hide(ntf);
+      hide(ntfId);
     });
+
+    count += 1;
+
+    return ntfId;
 
   }
 
-  hide = function(elem) {
+  hide = function(notificationId) {
 
-    elem.className = elem.className.replace(' shown', '');
+    var notification = document.getElementById(notificationId);
 
-    setTimeout(function() {
-      elem.parentNode.removeChild(elem);
-    }, 600);
+    if (notification) {
 
+      notification.className = notification.className.replace(' shown', '');
+
+      setTimeout(function() {
+        notification.parentNode.removeChild(notification);
+      }, 600);
+
+      return true;
+
+    } else {
+      return false;
+    }
   }
 
   createContainer();
 
   return {
-    show: show
+    show: show,
+    hide: hide
   }
 
 })(window, document);
