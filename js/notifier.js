@@ -1,21 +1,22 @@
-notifier = (function(w, d) {
+var notifier = (function(w, d) {
+  'use strict';
 
-  count = 0;
+  var count = 0;
 
-  myCreateElement = function(elem, attrs) {
+  var myCreateElement = function(elem, attrs) {
     var el = d.createElement(elem);
-    for (prop in attrs) {
+    for (var prop in attrs) {
       el.setAttribute(prop, attrs[prop]);
     }
     return el;
-  }
+  };
 
-  createContainer = function() {
+  var createContainer = function() {
     var container = myCreateElement('div', {class: 'notifier-container', id: 'notifier-container'});
     d.body.appendChild(container);
-  }
+  };
 
-  show = function(title, msg, type, icon, timeout) {
+  var show = function(title, msg, type, icon, timeout) {
 
     if (typeof timeout != 'number') timeout = 0;
 
@@ -51,7 +52,7 @@ notifier = (function(w, d) {
       ntf.setAttribute('id', ntfId);
     }, 100);
 
-    if (timeout != 0) {
+    if (timeout > 0) {
 
       setTimeout(function() {
         hide(ntfId);
@@ -67,9 +68,9 @@ notifier = (function(w, d) {
 
     return ntfId;
 
-  }
+  };
 
-  hide = function(notificationId) {
+  var hide = function(notificationId) {
 
     var notification = document.getElementById(notificationId);
 
@@ -86,13 +87,13 @@ notifier = (function(w, d) {
     } else {
       return false;
     }
-  }
+  };
 
   createContainer();
 
   return {
     show: show,
     hide: hide
-  }
+  };
 
 })(window, document);
