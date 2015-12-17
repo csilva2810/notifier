@@ -7,32 +7,32 @@
   <title>Notifier</title>
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="manifest" href="img/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="manifest" href="../../img/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="../../img/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
-  <link rel="stylesheet" href="css/page.css">
-  <link rel="stylesheet" href="css/notifier.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/page.css">
+  <link rel="stylesheet" href="../../css/notifier.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
 
   <!--highlight js-->
-  <link rel="stylesheet" href="js/highlight/styles/atelier-cave.light.css">
-  <script type="text/javascript" src="js/highlight/highlight.pack.js"></script>
+  <link rel="stylesheet" href="../../js/highlight/styles/atelier-cave.light.css">
+  <script type="text/javascript" src="../../js/highlight/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
@@ -63,12 +63,20 @@
 
     <main class="box">
 
+      <div class="text-right">
+        <label class="label" for="idiom">Idioma: </label>
+        <select name="idiom" id="idiom" class="form-control">
+          <option value="en">Inglês</option>
+          <option value="pt_br" selected>Português Brasil</option>
+        </select>
+      </div>
+
       <h2 class="title">Como Usar?</h2>
       <p>Muito Simples!</p>
       <ol>
         <li>Baixe o projeto.</li>
         <li>Exporte os arquivos.</li>
-        <li>Copie os arquivos "css/notifier.min.css" e "js/notifier.min.js" para dentro do seu projeto.</li>
+        <li>Copie os arquivos "notifier.min.css" e "notifier.min.js" para dentro do seu projeto.</li>
         <li>Importe o CSS no <code class="code">&lt;header&gt;</code></li>
         <li>Importe o JS antes do fechamento do <code class="code">&lt;body&gt;</code></li>
         <li>Agora é só ser feliz! ;)</li>
@@ -299,8 +307,8 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="js/notifier.js"></script>
-  <script type="text/javascript" src="js/page.js"></script>
+  <script type="text/javascript" src="../../js/notifier.js"></script>
+  <script type="text/javascript" src="../../js/page.js"></script>
 
 </body>
 </html>
