@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notifier</title>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="manifest" href="../../img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700,400" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/page.css">
+  <link rel="stylesheet" href="../../css/notifier.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+  <!--highlight js-->
+  <link rel="stylesheet" href="../../js/highlight/styles/atelier-cave.light.css">
+  <script type="text/javascript" src="../../js/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+  <header class="header">
+
+    <h1 class="page-title">Notifier</h1>
+    <h2 class="page-description">Bealtiful notifications with CSS and Vanilla JavaScript!</h2>
+
+    <p class="page-description-text">
+      Working in a project that needs a solution for display notifications? <strong title="Pulando de Alegria!">Good news \o/</strong> <br>
+      Notifier can helps you with this task! Just import it into your project and start to use!
+    </p>
+
+    <div class="text-center">
+      <a href="https://github.com/csilva2810/notifier/archive/master.zip" class="btn btn-outline btn-large" target="_blank">
+        Download ZIP <i class="fa fa-download"></i>
+      </a>
+      <a href="https://github.com/csilva2810/notifier" class="btn btn-outline btn-large" target="_blank">
+        GitHub Project <i class="fa fa-github"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    <main class="box">
+
+      <div class="text-right">
+        <label class="label" for="idiom">Idiom: </label>
+        <select name="idiom" id="idiom" class="form-control">
+          <option value="en" selected>English</option>
+          <option value="pt_br">Brazil Portuguese</option>
+        </select>
+      </div>
+
+      <h2 class="title">How to use?</h2>
+      <p>Very Simple!</p>
+      <ol>
+        <li>Download the project.</li>
+        <li>Export the files.</li>
+        <li>Copy the files "notifier.min.css" and "notifier.min.js" into your project.</li>
+        <li>Import the CSS into <code class="code">&lt;header&gt;</code></li>
+        <li>Import the JS before closing the <code class="code">&lt;body&gt;</code></li>
+        <li>Enjoy! ;)</li>
+      </ol>
+
+      <h2 class="title">Default Notifications</h2>
+
+      <div class="btn-group">
+        <button type="button" class="btn" id="btn-default">Default</button>
+        <button type="button" class="btn btn-info" id="btn-info">Info</button>
+        <button type="button" class="btn btn-success" id="btn-success">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger" id="btn-danger" >Danger</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Hello!' , 'I am a default notification.', '', '', 0);
+          notifier.show('Reminder!', 'You have a meeting at 10:30 AM.', '', '', 0);
+          notifier.show('Well Done!', 'You just submit your resume successfuly.', '', '', 0);
+          notifier.show('Warning!' , 'The data presented here can be change.', '', '', 0);
+          notifier.show('Sorry!', 'Could not complete your transaction.', '', '', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Notifications With Icons</h2>
+
+      <div class="btn-group">
+        <button type="button" class="btn" id="btn-default-i">Default</button>
+        <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
+        <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
+        <button type="button" class="btn btn-danger" id="btn-danger-i" >Danger</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!' , 'I am a default notification.', '', 'img/clock-48.png', 0);
+          notifier.show('Reminder!', 'You have a meeting at 10:30 AM.', '', 'img/survey-48.png', 0);
+          notifier.show('Well Done!', 'You just submit your resume successfuly.', '', 'img/ok-48.png', 0);
+          notifier.show('Warning!' , 'The data presented here can be change.', '', 'img/medium_priority-48.png', 0);
+          notifier.show('Sorry!', 'Could not complete your transaction.', '', 'img/high_priority-48.png', 0);
+        </code>
+      </pre>
+
+      <h2 class="title">Auto Close Notifications</h2>
+
+      <div class="btn-group">
+        <button type="button" class="btn"             id="btn-default-temp">Default</button>
+        <button type="button" class="btn btn-info"    id="btn-info-temp"   >Info</button>
+        <button type="button" class="btn btn-success" id="btn-success-temp">Success</button>
+        <button type="button" class="btn btn-warning" id="btn-warning-temp">Warning</button>
+        <button type="button" class="btn btn-danger"  id="btn-danger-temp" >Danger</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          notifier.show('Default!' , 'I am a default notification.', '', 'img/clock-48.png', 4000);
+          notifier.show('Reminder!', 'You have a meeting at 10:30 AM.', '', 'img/survey-48.png', 4000);
+          notifier.show('Well Done!', 'You just submit your resume successfuly.', '', 'img/ok-48.png', 4000);
+          notifier.show('Warning!' , 'The data presented here can be change.', '', 'img/medium_priority-48.png', 4000);
+          notifier.show('Sorry!', 'Could not complete your transaction.', '', 'img/high_priority-48.png', 4000);
+        </code>
+      </pre>
+
+      <h2 class="title">Using the notification.hide() method</h2>
+
+      <p>
+        The method <b>notification.show()</b> always returns the notification's ID that was openned. We can store this ID in a variable
+        to call the method <b>notification.hide()</b> passing this ID to shut the notification anywhere we want. <br>
+        <b>See the example: </b>
+      </p>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info" id="btn-nt-show">Show Notification</button>
+        <button type="button" class="btn btn-danger" id="btn-nt-hide">Hide Notification</button>
+      </div>
+
+      <pre>
+        <code class="javascript code-example">
+          var notificationId;
+
+          var showNotification = function () {
+            notificationId = notifier.show('Reminder!', 'You have a meeting at 10:30 AM.', '', 'img/survey-48.png', 4000);
+          };
+
+          var hideNotification = function () {
+            notifier.hide(notificationId);
+          };
+
+          document.querySelector('#btn-nt-show').addEventListener('click', showNotification);
+          document.querySelector('#btn-nt-hide').addEventListener('click', hideNotification);
+        </code>
+      </pre>
+
+      <h2 class="title">Methods</h2>
+
+      <h3 class="method">notifier.show(title, msg, type, icon, timeout);</h3>
+      <table class="table">
+
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>title</td>
+            <td>Notification's title.</td>
+          </tr>
+          <tr>
+            <td>msg</td>
+            <td>Notification's text.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>
+              Notification's color. <br>
+              <b>Possible Values: </b> '', info, success, warning, danger
+            </td>
+          </tr>
+          <tr>
+            <td>icon</td>
+            <td>
+              Path to the image that will be displayed inside the notification. <br>
+              <b>For example:</b> 'img/icon.png'
+            </td>
+          </tr>
+          <tr>
+            <td>timeout</td>
+            <td>
+              Time in miliseconds to close the notification automatically. <br>
+              <b>Only works if the value passed is greater than zero</b>
+            </td>
+          </tr>
+          <tr>
+            <td class="bold">Return: </td>
+            <td>Notification's ID</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <h3 class="method">
+        notifier.hide(notificationId); <br>
+        <small>You can use this method to shut the notification by Javascript</small>
+      </h3>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>notificationId</td>
+            <td>Notification's ID</td>
+          </tr>
+          <tr>
+            <td class="bold">Return: </td>
+            <td>
+              <ul>
+                <li>true - If the notification was closed</li>
+                <li>false - If the notification was not closed</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="title">Supported Browsers</h2>
+
+      <ul class="browser-list">
+        <li class="browser-list-item">
+          <a href="https://www.google.com.br/chrome/browser/desktop/" target="_blank">
+            <i class="browser chrome"></i><small>Chrome</small>
+          </a>
+        </li>
+        <li class="browser-list-item">
+          <a href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank">
+            <i class="browser firefox"></i><small>Firefox</small>
+          </a>
+        </li>
+        <li class="browser-list-item">
+          <a href="http://windows.microsoft.com/pt-br/internet-explorer/download-ie" target="_blank">
+            <i class="browser ie"></i><small>IE9+</small>
+          </a>
+        </li>
+        <li class="browser-list-item">
+          <a href="http://www.opera.com/" target="_blank">
+            <i class="browser opera"></i><small>Opera</small>
+          </a>
+        </li>
+        <li class="browser-list-item">
+          <a href="http://www.apple.com/br/safari/" target="_blank">
+            <i class="browser safari"></i><small>Safari</small>
+          </a>
+        </li>
+      </ul>
+
+    </main><!-- .box -->
+
+  </div><!-- .container -->
+
+  <footer class="footer text-center">
+    <p>Created By <a href="mailto:csilva2810@gmail.com" target="_blank">Carlos Silva</a></p>
+    <div class="social">
+      <a class="social-item" href="https://github.com/csilva2810" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="social-item" href="https://plus.google.com/u/0/+CarlosAlbertoSilvaJunior" target="_blank">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a class="social-item" href="https://instagram.com/csilva_2810/" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="social-item" href="https://twitter.com/csilva2810" target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="social-item" href="mailto:csilva2810@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../../js/notifier.js"></script>
+  <script type="text/javascript" src="../../js/page.js"></script>
+
+</body>
+</html>

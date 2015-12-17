@@ -194,6 +194,25 @@ pre {
   box-shadow: none;
   background: rgba(255,255,255,0.2);
 }
+.label {
+  font-weight: bold;
+}
+.form-control {
+  display: inline-block;
+  width: auto;
+  height: 36px;
+  color: #777;
+  background-color: #fff;
+  border: 2px solid #e0e3e4;
+  border-radius: 6px;
+  outline: none;
+  transition: .3s;
+}
+.form-control:hover,
+.form-control:focus {
+  border-color: #e0e3e4;
+  background-color: #fcfeff;
+}
 .table {
   width: 100%;
   margin: 0 auto;
@@ -300,6 +319,9 @@ hr {
 }
 .text-left {
   text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 .bold {
   font-weight: bold;
