@@ -105,5 +105,5 @@ if( typeof exports !== 'undefined' ) {
   exports.notifier = notifier;
 }
 else {
-  root.notifier = notifier;
+  window.notifier = notifier;
 }
