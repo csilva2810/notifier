@@ -97,3 +97,13 @@ var notifier = (function(w, d) {
   };
 
 })(window, document);
+
+if( typeof exports !== 'undefined' ) {
+  if( typeof module !== 'undefined' && module.exports ) {
+    exports = module.exports = notifier;
+  }
+  exports.notifier = notifier;
+}
+else {
+  window.notifier = notifier;
+}
