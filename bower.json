@@ -1,0 +1,29 @@
+{
+  "name": "notifier JS",
+  "description": "Javascript plugin to display bealtiful and personalized notifications",
+  "version": "1.0.0",
+  "main": "dist/js/notifier.min.js",Y
+  "authors": [
+    "Carlos Alberto <csilva2810@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "notifier",
+    "notification",
+    "javascript",
+    "plugin"
+  ],
+  "homepage": "https://github.com/csilva2810/notifier",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
