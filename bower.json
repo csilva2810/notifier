@@ -1,5 +1,5 @@
 {
-  "name": "notifier JS",
+  "name": "notifier_JS",
   "description": "Javascript plugin to display bealtiful and personalized notifications",
   "version": "1.0.0",
   "main": "dist/js/notifier.min.js",
