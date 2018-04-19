@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'dist/js/notifier.min.js': ['js/notifier.js']
+          'dist/js/notifier.js': ['js/notifier.js']
         }
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			dist: {
 	      src: ['css/notifier.css'],
-				dest: 'dist/css/notifier.min.css'
+				dest: 'dist/css/notifier.css'
 			}
 		},
 		
@@ -31,8 +31,8 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { flatten: true, src: ['dist/js/notifier.min.js'],   dest: 'demo/js/notifier.min.js'  },
-          { flatten: true, src: ['dist/css/notifier.min.css'], dest: 'demo/css/notifier.min.css' }
+          { flatten: true, src: ['dist/js/notifier.js'],   dest: 'demo/js/notifier.js'  },
+          { flatten: true, src: ['dist/css/notifier.css'], dest: 'demo/css/notifier.css' }
         ]
       }
     }

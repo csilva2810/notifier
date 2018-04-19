@@ -2,7 +2,7 @@
   "name": "notifier JS",
   "description": "Javascript plugin to display bealtiful and personalized notifications",
   "version": "1.0.0",
-  "main": "dist/js/notifier.min.js",
+  "main": "dist/js/notifier.js",
   "authors": [
     "Carlos Alberto <csilva2810@gmail.com>"
   ],

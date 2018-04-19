@@ -1,7 +1,16 @@
-var notifier = (function(w, d) {
-  'use strict';
-
+;(function (root, factory) {
+  if (typeof exports === 'object' && typeof module === 'object') {
+    module.exports = factory();
+  } else if(typeof define === 'function' && define.amd) {
+    define([], factory);
+  } else if(typeof exports === 'object') {
+    exports['notifier'] = factory();
+  } else {
+    root['notifier'] = factory();
+  }
+}(typeof self !== 'undefined' ? self : this, function () {
   var count = 0;
+  var d = document;
 
   var myCreateElement = function(elem, attrs) {
     var el = d.createElement(elem);
@@ -95,15 +104,4 @@ var notifier = (function(w, d) {
     show: show,
     hide: hide
   };
-
-})(window, document);
-
-if( typeof exports !== 'undefined' ) {
-  if( typeof module !== 'undefined' && module.exports ) {
-    exports = module.exports = notifier;
-  }
-  exports.notifier = notifier;
-}
-else {
-  window.notifier = notifier;
-}
+}));
