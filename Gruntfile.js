@@ -1,11 +1,11 @@
 module.exports = function(grunt) {
 	'use strict';
- 
+
 	// configuração do projeto
 	var gruntConfig = {
-		
+
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		uglify: {
       options: {
         mangle: false
@@ -16,18 +16,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
 		cssmin: {
 			dist: {
 	      src: ['css/notifier.css'],
 				dest: 'dist/css/notifier.css'
 			}
 		},
-		
+
 		jshint: {
       all: ['Gruntfile.js', 'js/notifier.js']
     },
-    
+
     copy: {
       main: {
         files: [
@@ -36,16 +36,16 @@ module.exports = function(grunt) {
         ]
       }
     }
-    
+
 	};
- 
+
 	grunt.initConfig(gruntConfig);
-	
+
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-copy');
- 
+
 	grunt.registerTask('build', ['uglify', 'cssmin', 'copy']);
 	grunt.registerTask('test', ['jshint']);
 };
