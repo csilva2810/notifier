@@ -11,6 +11,10 @@
 }(typeof self !== 'undefined' ? self : this, function () {
   var count = 0;
   var d = document;
+  
+  var escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+		createHTML: (string) => string
+	}); 
 
   var myCreateElement = function(elem, attrs) {
     var el = d.createElement(elem);
@@ -39,9 +43,9 @@
         img       = myCreateElement('img', {class: 'img', src: icon}),
         ntfClose  = myCreateElement('button',{class: 'notifier-close', type: 'button'});
 
-    ntfTitle.innerHTML = title;
-    ntfBody.innerHTML  = msg;
-    ntfClose.innerHTML = '&times;';
+    ntfTitle.innerHTML = escapeHTMLPolicy.createHTML(title);
+    ntfBody.innerHTML  = escapeHTMLPolicy.createHTML(msg);
+    ntfClose.innerHTML = escapeHTMLPolicy.createHTML('&times;');
 
     if (icon.length > 0) {
       ntfImg.appendChild(img);
